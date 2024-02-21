@@ -1,6 +1,6 @@
 const art = require('ascii-art');
 
-art.font("PUTIN  -  DIE!!!", 'doom', (err, rendered) => {
+art.font("Just a words here", 'doom', (err, rendered) => {
     if (err) return;
     console.log(rendered);
 });
