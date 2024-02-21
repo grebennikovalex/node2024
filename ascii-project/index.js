@@ -1,6 +1,6 @@
 const art = require('ascii-art');
 
-art.font("Just a words here", 'doom', (err, rendered) => {
+art.font("War is peace. Freedom is slavery. Ignorance is strength.", 'doom', (err, rendered) => {
     if (err) return;
     console.log(rendered);
 });
