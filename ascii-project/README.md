@@ -2,10 +2,7 @@
 
 ## Prepare
 
-
 npm install
-
-or
 
 npm ci
 
