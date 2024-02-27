@@ -1,4 +1,4 @@
-export default await new Promise((resolve, reject) => {
+export default new Promise((resolve, reject) => {
     console.log('timeout started')
     setTimeout(() => {
         console.log('timeout finished')
@@ -9,4 +9,3 @@ export default await new Promise((resolve, reject) => {
         }
     }, 2000)
 })
-
