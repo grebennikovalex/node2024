@@ -1,0 +1,17 @@
+{
+  "name": "quadratic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "quadratic.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "start": "quadratic.js",
+    "dev": "nodemon quadratic.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
