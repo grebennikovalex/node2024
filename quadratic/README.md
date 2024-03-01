@@ -12,5 +12,8 @@ npm ci
 ## Run
 
 ```
-node quadratic **[first argument]  [second argument (optional)] [third argument (optional)]**
+node quadratic 
+**
+[first argument]  [second argument (optional)] [third argument (optional)]
+**
 ```
