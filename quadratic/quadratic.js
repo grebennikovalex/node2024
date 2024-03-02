@@ -29,8 +29,8 @@ if (a === 0) {
     const discriminant = (b ** 2) - (4 * a * c);
 
     if (discriminant > 0) {
-        const srtDiscriminant = Math.sqrt(discriminant);
-        const results = [(-b + srtDiscriminant) / (2 * a), (-b - srtDiscriminant) / (2 * a)];
+        const sqrtDiscriminant = Math.sqrt(discriminant);
+        const results = [(-b + sqrtDiscriminant) / (2 * a), (-b - sqrtDiscriminant) / (2 * a)];
         results.sort();
         stdout.write(`There are two roots: ${results[0]} ${results[1]}`);
     } else if (discriminant === 0) {
