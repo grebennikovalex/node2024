@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node --env-file=.env envlog.js",
-    "dev": "node --env-file=.env_dev envlog.js"
+    "dev": "nodemon --env-file=.env_dev envlog.js"
   },
   "author": "",
   "license": "ISC",
