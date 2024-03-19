@@ -4,7 +4,7 @@ import { existsSync, writeFileSync, readFileSync } from "node:fs";
 
 export default class DatabaseService {
   database = [];
-  filePath = join(cwd(), "..", "project_08_database.json");
+  filePath = join(cwd(), ".", "dz03_database.json");
 
   constructor() {
     if (existsSync(this.filePath)) {
