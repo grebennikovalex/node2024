@@ -1,8 +1,11 @@
 import express from "express";
 import DatabaseService from "./database-service.js";
+import cors from "cors";
 import bodyParser from "body-parser";
 const db = new DatabaseService();
 const app = express();
+
+app.use(cors());
 
 app.use(express.static("public"));
 
