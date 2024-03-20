@@ -20,7 +20,7 @@ app.get("/api/v1.0/contacts", (req, res) => {
   const allData = db.getAll();
   setTimeout(() => {
     res.send(allData);
-  }, 3000);
+  }, 1000);
 });
 app.get("/api/v1.0/contacts/:id", (req, res) => {
   const id = Number(req.params.id);
@@ -55,7 +55,7 @@ app.post("/api/v1.0/contacts/", (req, res) => {
 });
 
 app.patch("/api/v1.0/contacts/:id", (req, res) => {
-  const id = Number(req.params.id);
+  const id = req.params.id;
 
   if (!id) {
     res.status(500);
@@ -84,7 +84,7 @@ app.patch("/api/v1.0/contacts/:id", (req, res) => {
 });
 
 app.delete("/api/v1.0/contacts/:id", (req, res) => {
-  const id = Number(req.params.id);
+  const id = req.params.id;
 
   if (!id) {
     res.status(500);
