@@ -1,0 +1,30 @@
+{
+  "name": "project_12_jwt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "start_mysql": "node --env-file=.env index.js",
+    "start_pg": "node --env-file=.env_pg index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.18.3",
+    "mysql2": "^3.9.2",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "readline": "^1.3.0",
+    "sequelize": "^6.37.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
