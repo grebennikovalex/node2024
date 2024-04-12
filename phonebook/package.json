@@ -5,9 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "start_mysql": "node --env-file=.env index.js",
-    "start_pg": "node --env-file=.env_pg index.js",
+    "start": "node --env-file=.env index.js",
     "dev": "nodemon index.js"
   },
   "author": "",

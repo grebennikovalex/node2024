@@ -25,11 +25,8 @@ app.post("/api/v1.0/login", async (req, res) => {
   const user = await db.getUserByName(data.userName);
 
   if (!user) {
-    const hashedpass = await bcrypt.hash(data.password, 8);
-    const newUser = await db.createUser({ userName: data.userName, password: hashedpass });
-    res.status(200);
-    const payload = { id: newUser.id };
-    res.send({ token: getJwt(payload, jwtSecret) });
+    res.status(404);
+    res.send({ userName: data.userName, password: data.password });
   } else {
     try {
       bcrypt.compare(data.password, user.password, (err, check) => {
@@ -47,6 +44,21 @@ app.post("/api/v1.0/login", async (req, res) => {
       res.status(500);
       res.send(e);
     }
+  }
+});
+
+app.post("/api/v1.0/user", async (req, res) => {
+  const data = req.body;
+
+  try {
+    const hashedpass = await bcrypt.hash(data.password, 8);
+    const newUser = await db.createUser({ userName: data.userName, password: hashedpass });
+    res.status(200);
+    const payload = { id: newUser.id };
+    res.send({ token: getJwt(payload, jwtSecret) });
+  } catch (e) {
+    res.status(500);
+    res.send(e);
   }
 });
 
